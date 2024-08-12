@@ -1,4 +1,5 @@
 body {
+  width: 100vh;
   background-color: #e6f2eb;
   margin: 0;
   position: relative;
@@ -10,27 +11,31 @@ body {
   /* margin-bottom: 70px; */
 }
 
+.container {
+  font-family: "Karla", system-ui;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 450px;
+  position: absolute;
+  left: 65%;
+  top: 50px;
+  /* text-align: left; */
+  /* border: 2px solid black; */
+
+  /* display: inline-block; */
+}
+.contact-form{
+  width: 100%;
+}
 h2 {
   text-align: right;
   display: inline-block;
   margin: 0;
-  margin-top: 19px;
-}
-.container {
-  font-family: "Karla", system-ui;
-  font-size: 16px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  padding: 30px;
-  width: 500px;
-  position: absolute;
-  left: 400px;
-  /* top: 50px; */
-  text-align: left;
-  /* border: 2px solid black; */
-
-  /* display: inline-block; */
+  margin-top: 0px;
+  color: (186, 15%, 59%);
 }
 /* form{
   border: 2px solid black;
@@ -48,6 +53,10 @@ h2 {
 .firstname {
   display: inline-block;
   width: 50%;
+  label:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
   input {
     width: 95%;
     height: 40px;
@@ -60,8 +69,13 @@ h2 {
 
 .lastname {
   display: inline-block;
+  width: 49.1%;
+  label:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
   input {
-    width: 135%;
+    width: 94.4%;
     margin-top: 10px;
     border-radius: 5px;
     height: 40px;
@@ -71,6 +85,10 @@ h2 {
 
 .grouped-email {
   width: 100%;
+  label:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
   /* border: 2px solid black; */
   input {
     margin-top: 10px;
@@ -84,6 +102,7 @@ h2 {
 .radio-group {
   /* border: 2px solid black; */
   width: 100%;
+  
   .gen-enquiry {
     /* padding-top: 10px; */
     margin-top: 10px;
@@ -104,16 +123,47 @@ h2 {
     border-radius: 5px;
   }
 }
-.form-group{
+.form-group {
   margin-top: 20px;
-  textarea{
+  #labelq:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
+  #labelm:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
+  .form-message{
     margin-top: 10px;
     width: 98%;
+    height: 90px;
     border-radius: 5px;
-    border: 1px solid  hsl(169, 82%, 27%);
+    border: 1px solid hsl(169, 82%, 27%);
+    padding: 0;
+    resize: none;
+    color: hsl(187, 24%, 22%);
   }
 }
-button{
+body > div > form > div.form-group.consent{
+  /* border: 2px solid black; */
+  width: 100%;
+  display: inline-block;
+  label{
+    margin-left: 10px;
+  }
+  label:after {
+    content: " *";
+    color:  hsl(169, 82%, 27%); /* green color for the asterisk */
+  }
+  input[type="checkbox"] {
+    display: inline-block;
+    /* border-radius: 0px; */
+    /* margin-top: 10px; */
+    vertical-align: middle;
+    /* border: 2px solid black; */
+  }
+}
+button {
   margin-top: 20px;
   display: inline-block;
   width: 100%;
